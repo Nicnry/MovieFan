@@ -1,0 +1,29 @@
+﻿@model List<Users>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>index</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Users admin in Model)
+            {
+                <tr>
+                    <th scope="row">@admin.Id</th>
+                    <td>@admin.Firstname</td>
+                    <td><a href="/Admin/Details/@admin.Id" class="btn btn-outline-primary" role="button" aria-pressed="true">Afficher l'admin</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
