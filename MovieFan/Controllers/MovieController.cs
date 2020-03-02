@@ -62,6 +62,7 @@ namespace MovieFan.Controllers
             List <Categories> categories = db.Categories.ToList();
             ViewBag.CategoryId = db.Categories.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
             ViewBag.RatingId = db.Ratings.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
+            TempData["name"] = "Test data";
             return View(movie);
         }
 
@@ -75,6 +76,7 @@ namespace MovieFan.Controllers
                 // TODO: Add update logic here
                 db.Update(movie);
                 db.SaveChanges();
+                TempData["Saved"] = movie.Title;
                 return RedirectToAction(nameof(Index));
             }
             catch
