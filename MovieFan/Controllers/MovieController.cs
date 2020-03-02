@@ -58,8 +58,8 @@ namespace MovieFan.Controllers
             moviefanContext db = new moviefanContext();
             Movies movie = db.Movies.Include(m => m.Category).Include(m => m.Rating).SingleOrDefault(x => x.Id == id); ;
             List <Categories> categories = db.Categories.ToList();
-            ViewBag.Categories = db.Categories;
-            ViewBag.RatingId = db.Ratings.ToList();
+            ViewBag.CategoryId = db.Categories.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
+            ViewBag.RatingId = db.Ratings.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
             return View(movie);
         }
 
