@@ -4,11 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieFan.Models;
 
 namespace MovieFan.Controllers
 {
     public class RatingController : Controller
     {
+        private readonly moviefanContext db;
+
+        public RatingController(moviefanContext db)
+        {
+            this.db = db;
+        }
         // GET: Rating
         public ActionResult Index()
         {

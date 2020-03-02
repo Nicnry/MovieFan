@@ -4,11 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieFan.Models;
 
 namespace MovieFan.Controllers
 {
     public class CategoryController : Controller
     {
+        private readonly moviefanContext db;
+
+        public CategoryController(moviefanContext db)
+        {
+            this.db = db;
+        }
         // GET: Category
         public ActionResult Index()
         {

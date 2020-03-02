@@ -10,10 +10,15 @@ namespace MovieFan.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly moviefanContext db;
+
+        public AdminController(moviefanContext db)
+        {
+            this.db = db;
+        }
         // GET: Admin
         public ActionResult Index()
         {
-            moviefanContext db = new moviefanContext();
             List<Users> admins = db.Users.ToList();
             return View(admins);
         }
@@ -21,7 +26,6 @@ namespace MovieFan.Controllers
         // GET: Admin/Details/5
         public ActionResult Details(int id)
         {
-            moviefanContext db = new moviefanContext();
             Users admin = db.Users.Find(id);
             return View(admin);
         }
