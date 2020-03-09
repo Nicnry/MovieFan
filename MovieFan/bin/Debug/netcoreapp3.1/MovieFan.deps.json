@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "MovieFan/1.0.0": {
         "dependencies": {
+          "BuildBundlerMinifier": "3.2.435",
           "EntityFramework": "6.4.0",
           "Microsoft.EntityFrameworkCore": "3.1.2",
           "Microsoft.EntityFrameworkCore.Design": "3.1.2",
@@ -310,6 +311,7 @@
           "MovieFan.dll": {}
         }
       },
+      "BuildBundlerMinifier/3.2.435": {},
       "EntityFramework/6.4.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -4050,6 +4052,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BuildBundlerMinifier/3.2.435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6i5tLEU9c1o8+y01Ie9J+y8CY8x4P0R1G56KNDtgJmPI3Vd/GzqMqnTxoe8wpg/MAl15jk0KuIzerY1Kxu/WAg==",
+      "path": "buildbundlerminifier/3.2.435",
+      "hashPath": "buildbundlerminifier.3.2.435.nupkg.sha512"
     },
     "EntityFramework/6.4.0": {
       "type": "package",

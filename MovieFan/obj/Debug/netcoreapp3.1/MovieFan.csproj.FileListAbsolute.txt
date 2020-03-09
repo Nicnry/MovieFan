@@ -154,7 +154,6 @@ C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcor
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
@@ -176,3 +175,6 @@ C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcor
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Edit.cshtml.g.cs
+C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\bundleconfig.json
+C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\bin\Debug\netcoreapp3.1\package-lock.json
+C:\Users\Nicolas.HENRY\Documents\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.MvcApplicationPartsAssemblyInfo.cache
