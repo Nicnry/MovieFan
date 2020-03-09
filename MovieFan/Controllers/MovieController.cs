@@ -58,7 +58,12 @@ namespace MovieFan.Controllers
         // GET: Movie/Edit/5
         public ActionResult Edit(int id)
         {
-            Movies movie = db.Movies.Include(m => m.Category).Include(m => m.Rating).SingleOrDefault(x => x.Id == id); ;
+            Movies movie = db.Movies
+                .Include(m => m.Category)
+                .Include(m => m.Rating)
+                .Include(m => m.UserLikeMovie).ThenInclude(m => m.User)
+                .SingleOrDefault(x => x.Id == id);
+
             List <Categories> categories = db.Categories.ToList();
             ViewBag.CategoryId = db.Categories.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
             ViewBag.RatingId = db.Ratings.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
