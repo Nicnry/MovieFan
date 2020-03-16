@@ -35,7 +35,7 @@
     <div class="container">
         @if (TempData.Peek("Saved") != null)
         {
-            <div class="alert alert-success" role="alert">
+            <div id="flashmessage" class="alert alert-success" role="alert">
                 <b>@TempData["Saved"]</b> à bien été modifié
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

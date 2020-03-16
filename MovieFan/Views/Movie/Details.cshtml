@@ -8,10 +8,14 @@
 <h1>Details</h1>
 
 <div id="divShow">
-
+    <div class="row">
+        <h4>Détails de @Model.Title</h4>
+        <div id="cmdEdit" class="btn btn-sm btn-primary ml-5">Editer</div>
+        <a asp-action="Index" class="btn btn-sm btn-info ml-3">Retour à la liste</a>
+    </div>
 </div>
 
-<div id="divEdit" class="">
+<div id="divEdit" class="d-none">
     <form asp-action="Edit">
         <div class="row">
             <h4> Modification de @Model.Title</h4>
