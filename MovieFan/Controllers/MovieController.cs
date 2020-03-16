@@ -91,6 +91,7 @@ namespace MovieFan.Controllers
                 db.Update(movie);
                 db.SaveChanges();
                 TempData["Saved"] = movie.Title;
+                TempData["SavedType"] = "info";
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -113,12 +114,18 @@ namespace MovieFan.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                db.Remove(db.Movies.First(m => m.Id == id));
+                db.SaveChanges();
+                TempData["Saved"] = "Film supprimé";
+                TempData["SavedType"] = "info";
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                TempData["Saved"] = "Erreur...";
+                TempData["SavedType"] = "danger";
+                Console.WriteLine(e.ToString());
+                return Edit(id);
             }
         }
     }
