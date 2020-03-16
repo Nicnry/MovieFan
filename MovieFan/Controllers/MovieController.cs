@@ -28,7 +28,16 @@ namespace MovieFan.Controllers
         // GET: Movie/Details/5
         public ActionResult Details(int id)
         {
-            Movies movie = db.Movies.Find(id);
+            Movies movie = db.Movies
+                .Include(m => m.Category)
+                .Include(m => m.Rating)
+                .Include(m => m.UserLikeMovie).ThenInclude(m => m.User)
+                .SingleOrDefault(x => x.Id == id);
+
+            List<Categories> categories = db.Categories.ToList();
+            ViewBag.CategoryId = db.Categories.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
+            ViewBag.RatingId = db.Ratings.Select(m => new SelectListItem { Text = m.Name, Value = m.Id.ToString() }).ToList();
+            TempData["name"] = "Test data";
             return View(movie);
         }
 

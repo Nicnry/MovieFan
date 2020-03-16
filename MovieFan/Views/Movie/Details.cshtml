@@ -7,6 +7,50 @@
 
 <h1>Details</h1>
 
+<div id="divShow">
+
+</div>
+
+<div id="divEdit" class="">
+    <form asp-action="Edit">
+        <div class="row">
+            <h4> Modification de @Model.Title</h4>
+            <input type="submit" class="btn btn-sm btn-success ml-5" value="Enregistrer" />
+            <div id="cmdCancel" class="btn btn-sm btn-info ml-3">Annuler</div>
+        </div>
+        <hr/>
+        <div class="form-group row">
+            <label asp-for="Title" class="control-label col-2"></label>
+            <input asp-for="Title" class="form-control col-6"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Synopsis" class="control-label col-2"></label>
+            <textarea asp-for="Synopsis" class="form-control col-6">@Model.Synopsis</textarea>
+            <span asp-validation-for="Synopsis" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="CategoryId" class="control-label"></label>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Rating" class="control-label col-2"></label>
+            @foreach (var rating in ViewBag.RatingId)
+            {
+                <input asp-for="RatingId" type="radio" value="@rating.Value">
+                <label>@rating.Text</label>
+            }
+            <span asp-validation-for="Rating" class="text-danger"></span>
+        </div>
+        <input type="hidden" name="id" value="@Model.Id" />
+        <hr/>
+    </form>
+</div>
+
 <div>
     <h4>@Model.Title</h4>
     <hr />
@@ -29,3 +73,4 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     <a asp-action="Index">Back to List</a>
 </div>
+<script src="\js\showedit.min.js"></script>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicolas.HENRY\\Documents\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj": {}
+    "D:\\Documents\\1. Ecole\\Modules\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicolas.HENRY\\Documents\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj": {
+    "D:\\Documents\\1. Ecole\\Modules\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicolas.HENRY\\Documents\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj",
+        "projectUniqueName": "D:\\Documents\\1. Ecole\\Modules\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj",
         "projectName": "MovieFan",
-        "projectPath": "C:\\Users\\Nicolas.HENRY\\Documents\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj",
-        "packagesPath": "C:\\Users\\Nicolas.HENRY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicolas.HENRY\\Documents\\ASP\\MovieFan\\MovieFan\\MovieFan\\obj\\",
+        "projectPath": "D:\\Documents\\1. Ecole\\Modules\\ASP\\MovieFan\\MovieFan\\MovieFan\\MovieFan.csproj",
+        "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\1. Ecole\\Modules\\ASP\\MovieFan\\MovieFan\\MovieFan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicolas.HENRY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
