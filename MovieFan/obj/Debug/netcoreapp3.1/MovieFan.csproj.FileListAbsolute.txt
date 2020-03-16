@@ -359,3 +359,4 @@ D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreap
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.dll
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.pdb
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Delete.cshtml.g.cs
+D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Create.cshtml.g.cs

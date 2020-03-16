@@ -44,18 +44,27 @@ namespace MovieFan.Controllers
         // GET: Movie/Create
         public ActionResult Create()
         {
-            return View();
+            List<SelectListItem> categories = db.Categories.Select(x => new SelectListItem { Value = x.Id.ToString(), Text = x.Name }).ToList();
+            ViewBag.Categories = categories;
+            ViewBag.ratings = db.Ratings.ToList();
+            Movies movie = new Movies();
+            ViewBag.create = true;
+
+            return View("Details", movie);
         }
 
         // POST: Movie/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult<Movies> Create([Bind("Title, Synopsis, CategoryId, RatingId")] Movies movie)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                db.Movies.Add(movie);
+                db.SaveChanges();
+                TempData["Saved"] = "Film ajouté";
+                TempData["SavedType"] = "info";
                 return RedirectToAction(nameof(Index));
             }
             catch
