@@ -357,3 +357,5 @@ D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreap
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.csproj.CopyComplete
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.dll
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.pdb
+D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\User\ManageMovies.cshtml.g.cs
+D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\User\_MyMovies.cshtml.g.cs
