@@ -8,9 +8,10 @@ using MovieFan.Models;
 
 namespace MovieFan.Controllers
 {
+
     public class UserController : Controller
     {
-        private readonly moviefanContext db;
+        readonly moviefanContext db;
 
         public UserController(moviefanContext db)
         {

@@ -343,7 +343,6 @@ D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreap
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Details.cshtml.g.cs
-D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Edit.cshtml.g.cs
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\index.cshtml.g.cs
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -358,5 +357,3 @@ D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreap
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.csproj.CopyComplete
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.dll
 D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\MovieFan.pdb
-D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Delete.cshtml.g.cs
-D:\Documents\1. Ecole\Modules\ASP\MovieFan\MovieFan\MovieFan\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Create.cshtml.g.cs

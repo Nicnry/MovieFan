@@ -3,29 +3,69 @@
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    Helpers.ViewModes viewMode = ViewBag.viewMode ?? Helpers.ViewModes.Show;
 }
 
-<h1>Details</h1>
-
-@if (ViewBag.create == null)
-{
-    <div id="divShow">
-        <div class="row">
-            <h4>Détails de @Model.Title</h4>
-            <div id="cmdEdit" class="btn btn-sm btn-primary ml-5">Editer</div>
-            <a asp-action="Index" class="btn btn-sm btn-info ml-3">Retour à la liste</a>
+<div id="divShow" @(viewMode != Helpers.ViewModes.Show ? "class=d-none" : "")>
+    <div class="row">
+        <h4>Détails de @Model.Title</h4>
+        <div id="cmdEdit" class="btn btn-sm btn-primary ml-5">Editer</div>
+        <a asp-action="Index" class="btn btn-sm btn-info ml-3">Retour à la liste</a>
+    </div>
+    <hr />
+    <div class="row">
+        <label asp-for="ReleaseDate " class="control-label mr-3 col-2"></label>
+        <div class="col-8">
+            @String.Format("{0:dddd, dd MMMM yyyy}", Model.ReleaseDate)
         </div>
     </div>
-}
+    <hr />
+    <div class="row">
+        <label asp-for="Synopsis " class="control-label mr-3 col-2"></label>
+        <div class="col-8">
+            @Model.Synopsis
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <label asp-for="Category.Name " class="control-label mr-3 col-2"></label>
+        <div class="col-8">
+            @Model.Category.Name
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <label asp-for="Rating.Name " class="control-label mr-3 col-2"></label>
+        <div class="col-8">
+            @Model.Rating.Name
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <label asp-for="Likers " class="control-label mr-3 col-2"></label>
+        <div class="col-8">
+            @String.Join(", ", Model.Likers)
+        </div>
+    </div>
+</div>
 
-
-<div id="divEdit" class="d-none">
-    <form asp-action="Edit">
+<div id="divEdit" class=@(viewMode != Helpers.ViewModes.Show ? "" : "d-none")>
+    <form asp-action="@(viewMode == Helpers.ViewModes.Create ? "Create" : "Edit")">
         <div class="row">
-            <h4> Modification de @Model.Title</h4>
+            @if (viewMode == Helpers.ViewModes.Create)
+            {
+                <h4>Nouveau film</h4>
+            }
+            else
+            {
+                <h4>Modification de @Model.Title</h4>
+            }
             <input type="submit" class="btn btn-sm btn-success ml-5" value="Enregistrer" />
-            <div id="cmdCancel" class="btn btn-sm btn-info ml-3">Annuler</div>
-            <div id="cmdDelete" class="btn btn-sm btn-danger ml-5">Supprimer</div>
+            <div id="cmdCancel" class="btn btn-sm btn-info ml-3 mr-5">Annuler</div>
+            @if (viewMode != Helpers.ViewModes.Create)
+            {
+                <div id="cmdDelete" class="btn btn-sm btn-danger ml-5">Supprimer</div>
+            }
         </div>
         <hr />
         <div class="form-group row">
@@ -33,57 +73,39 @@
             <input asp-for="Title" class="form-control col-6" />
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
-
+        <hr />
+        <div class="form-group row">
+            <label asp-for="ReleaseDate" class="control-label col-2"></label>
+            <input asp-for="ReleaseDate" class="form-control col-6" />
+            <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+        </div>
+        <hr />
         <div class="form-group row">
             <label asp-for="Synopsis" class="control-label col-2"></label>
-            <textarea asp-for="Synopsis" class="form-control col-6">@Model.Synopsis</textarea>
+            <textarea asp-for="Synopsis" class="form-control col-6 mr-2">@Model.Synopsis</textarea>
             <span asp-validation-for="Synopsis" class="text-danger"></span>
         </div>
-
+        <hr />
         <div class="form-group row">
-            <label asp-for="CategoryId" class="control-label"></label>
-            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
+            <label asp-for="Category.Name" class="control-label col-2"></label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control col-6"></select>
+            <span asp-validation-for="Category" class="text-danger"></span>
         </div>
-
         <div class="form-group row">
-            <label asp-for="Rating" class="control-label col-2"></label>
-            @foreach (var rating in ViewBag.RatingId)
+            <label asp-for="Rating.Name" class="control-label col-2"></label>
+            @foreach (var item in ViewBag.ratings)
             {
-                <input asp-for="RatingId" type="radio" value="@rating.Value">
-                <label>@rating.Text</label>
+                <input asp-for="RatingId" type="radio" value="@item.Id" class="form-control ml-3 col-1" /><label class="control-label">@item.Name</label>
             }
             <span asp-validation-for="Rating" class="text-danger"></span>
         </div>
         <input type="hidden" name="id" value="@Model.Id" />
+        <input type="hidden" name="Picture" value="@Model.Picture"
         <hr />
     </form>
 </div>
-
 <form method="post" asp-action="Delete" id="frmDelete" class="d-none">
     <input type="hidden" name="id" value="@Model.Id" />
 </form>
-
-<div>
-    <h4>@Model.Title</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+<hr />
 <script src="\js\showedit.min.js"></script>

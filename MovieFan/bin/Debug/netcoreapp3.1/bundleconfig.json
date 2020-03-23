@@ -1,5 +1,11 @@
 [
   {
+    "outputFileName": "wwwroot/js/movieindex.min.js",
+    "inputFiles": [
+      "js/movieindex.js"
+    ]
+  },
+  {
     "outputFileName": "wwwroot/js/showedit.min.js",
     "inputFiles": [
       "js/showedit.js"
